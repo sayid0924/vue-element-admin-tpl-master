@@ -300,7 +300,7 @@
       }
     },
 
-    mounted () {
+    mounteds () {
       this.initData()
     },
     methods: {
@@ -315,21 +315,20 @@
         }
       },
 
-      handleBusinessAvatarScucess (res, file) {
-        if (res.status === 1) {
-          this.formData.business_license_image = res.image_path
-        } else {
-          this.$message.error('上传图片失败！')
-        }
-      },
-
-      handleServiceAvatarScucess (res, file) {
-        if (res.status === 1) {
-          this.formData.catering_service_license_image = res.image_path
-        } else {
-          this.$message.error('上传图片失败！')
-        }
-      },
+      // handleBusinessAvatarScucess (res, file) {
+      //   if (res.status === 1) {
+      //     this.formData.business_license_image = res.image_path
+      //   } else {
+      //     this.$message.error('上传图片失败！')
+      //   }
+      // },
+      // handleServiceAvatarScucess (res, file) {
+      //   if (res.status === 1) {
+      //     this.formData.catering_service_license_image = res.image_path
+      //   } else {
+      //     this.$message.error('上传图片失败！')
+      //   }
+      // },
 
       beforeAvatarUpload (file) {
         const isRightType = (file.type === 'image/jpeg') || (file.type === 'image/png')
