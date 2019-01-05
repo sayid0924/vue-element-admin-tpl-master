@@ -17,7 +17,8 @@ export default new Router({
       children: [
         {path: '/', name: 'home', component: Home},
         {path: '/addDoctor', name: 'addDoctor', component: page('addDoctor')},
-        {path: '/doctorList', name: 'doctorList', component: page('doctorList')}
+        {path: '/doctorList', name: 'doctorList', component: page('doctorList')},
+        {path: '/updateApp', name: 'updateApp', component: page('updateApp')}
       ]
     },
     {path: '/login', name: 'login', component: page('login')},
