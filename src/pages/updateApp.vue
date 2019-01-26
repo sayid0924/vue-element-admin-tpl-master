@@ -12,7 +12,7 @@
         class="upload-demo"
         drag
         ref="upload"
-        action="https://jsonplaceholder.typicode.com/posts/"
+        action="http://localhost:8100/uploadFile/upload"
         :multiple = "false"
         :auto-upload="false"
         :before-upload="beforeUploadFile"
@@ -100,7 +100,7 @@
       },
       // 上传失败
       handleAvatarError (response, file) {
-        console.log(response)
+        console.log(response.toString())
         this.formData.disabled = false
         this.$alert('上传失败请重新上传', '提示信息', {
           confirmButtonText: '确定'
@@ -108,6 +108,7 @@
       },
       // 文件状态改变时的钩子
       fileChange (file, fileList) {
+        console.log('0000000000000')
         console.log(file)
         this.uploadData.name = file.name
         this.uploadData.size = file.raw.size
